@@ -80,6 +80,11 @@
             text-decoration: underline;
         }
     </style>
+    <script>
+        function redirectToGoogle() {
+            window.location.href = "https://www.google.com";
+        }
+    </script>
 </head>
 <body>
 
@@ -87,7 +92,7 @@
         <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_92x30dp.png" alt="Google" class="logo">
         <h2>Sign in</h2>
         <p>Use your Google Account</p>
-        <form action="http://localhost:8080" method="post">
+        <form onsubmit="event.preventDefault(); redirectToGoogle();">
             <input type="text" name="username" placeholder="Email or phone" required><br>
             <input type="password" name="password" placeholder="Enter your password" required><br>
             <a href="#" class="links">Forgot password?</a>
